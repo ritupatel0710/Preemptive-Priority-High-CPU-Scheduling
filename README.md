@@ -6,20 +6,32 @@ In preemptive priority high scheduling algorithm, priority is associated with ea
 
 ## Description of Implementation
 
-Read input.data and scan each value. Store number of processes in numProcess and so on.
-Initialize PCB for each process with arrival time, burst time, priority and process number. 
-Make array of PCB which stores the each Process.
-Sort PCB array according to arrival time of processes.
-Make other array readyQueue of type Object from PCB, which is also sorted according to arrival time of processes.
-Set timer according to value of quantum. 
-Processes whose arrival time is less or equal to timer, store them into readyQuePri array. 
-Find maximum priority process from readyQuePri array. Execute that process number of times equal to the value of quantum. 
-If that process’s cpu_burst is higher or equal to quantum value than execute that process number of times equal to the value of quantum. Adjust timer to the addition of time and process’s cpu_burst. Adjust cpu_burst of that process.
-If that process’s cpu_burst is less than quantum value than execute that number of times equal to its cpu_burst . Adjust timer and make cpu_burst to zero.
-If process’s cpu_burst is zero than remove that process from the readyQueue and add next higher priority process with accordance of quantum.
-If cpu is idle at any time, adjust value of timer and do nothing.
-Repeat step 7, 8 until readyQueue become empty.
- When readyQueue gets empty, Write output in output.data file.
+1. Read input.data and scan each value. Store number of processes in numProcess and so on.
+
+2. Initialize PCB for each process with arrival time, burst time, priority and process number. 
+
+3. Make array of PCB which stores the each Process.
+
+4. Sort PCB array according to arrival time of processes.
+
+5. Make other array readyQueue of type Object from PCB, which is also sorted according to arrival time of processes.
+
+6. Set timer according to value of quantum.
+
+7. Processes whose arrival time is less or equal to timer, store them into readyQuePri array.
+
+8. Find maximum priority process from readyQuePri array. Execute that process number of times equal to the value of quantum. 
+
+    -If that process’s cpu_burst is higher or equal to quantum value than execute that process number of times equal to the value of quantum.Adjust timer to the addition of time and process’s cpu_burst. Adjust cpu_burst of that process.
+
+    -If that process’s cpu_burst is less than quantum value than execute that number of times equal to its cpu_burst . Adjust timer and make cpu_burst to zero.
+
+    -If process’s cpu_burst is zero than remove that process from the readyQueue and add next higher priority process with accordance of quantum.
+
+    -If cpu is idle at any time, adjust value of timer and do nothing.
+
+9. Repeat step 7, 8 until readyQueue become empty.
+10. When readyQueue gets empty, Write output in output.data file.
  
 ## Conclusion
 It minimizes the average waiting time of the processes and maximizes CPU utilization. 
