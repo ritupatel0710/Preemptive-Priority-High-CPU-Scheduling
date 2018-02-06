@@ -1,10 +1,10 @@
 # Preemptive-Priority-High-CPU-Scheduling
 
-##Description of Scheduling Algorithm
+## Description of Scheduling Algorithm
 
 In preemptive priority high scheduling algorithm, priority is associated with each process, and the CPU is allocated to the process with the highest priority. Higher number means higher priority and lower number means low priority according to arrival time and burst time also given. Preemptive task that means break the execution any time. Here we are going to break execution because it might happen that the process which we are currently running at the same time there is new process coming too and priority of that new process is highest than the currently running process. So we have to stop currently running process and give the priority to highest priority process. We have given quantum value, so we execute all processes based on that quantum value with same scenario. 
 
-##Description of Implementation
+## Description of Implementation
 
 Read input.data and scan each value. Store number of processes in numProcess and so on.
 Initialize PCB for each process with arrival time, burst time, priority and process number. 
@@ -21,10 +21,10 @@ If cpu is idle at any time, adjust value of timer and do nothing.
 Repeat step 7, 8 until readyQueue become empty.
  When readyQueue gets empty, Write output in output.data file.
  
-##Conclusion
+## Conclusion
 It minimizes the average waiting time of the processes and maximizes CPU utilization. 
 If a high priority process frequently arrives in the ready queue, low priority process may starve
 
-##Helpful URLS
+## Helpful URLS
 https://www.techopedia.com/definition/21478/priority-scheduling
 http://ijcsmc.com/docs/papers/September2015/V4I9201563.pdf
